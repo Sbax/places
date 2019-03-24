@@ -3,7 +3,7 @@ import config from '../config';
 
 const { INIT_GAPI_SUCCESS, INIT_GAPI_FAILURE } = actions;
 
-const apiKey = process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY;
+const apiKey = process.env.REACT_APP_GOOGLE_SHEETS_API_KEY;
 
 const initGapiSuccess = () => ({
   type: INIT_GAPI_SUCCESS,
