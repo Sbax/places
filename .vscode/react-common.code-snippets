@@ -1,0 +1,22 @@
+{
+  "reactClassComponent": {
+    "prefix": "react-component",
+    "body": "import React, { Component } from 'react';\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() {\n\t\treturn (\n\t\t\t<div>\n\t\t\t\t${1:${TM_FILENAME_BASE}} works!\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nexport default ${1:${TM_FILENAME_BASE}};",
+    "description": "Creates a React component class with ES6 module system"
+  },
+  "reduxContainer": {
+    "prefix": "redux-container",
+    "body": "import { connect } from 'react-redux';\n\nconst mapStateToProps = state => {\n\treturn;\n};\n\nconst mapDispatchToProps = dispatch => {\n\treturn;\n}\n\nconst ${1:${TM_FILENAME_BASE}} = connect(\n\tmapStateToProps,\n\tmapDispatchToProps\n)($2);\n\nexport default ${1:${TM_FILENAME_BASE}};",
+    "description": "Creates a Redux container React component"
+  },
+  "reactTest": {
+    "prefix": "test-react",
+    "body": "import { shallow } from 'enzyme';\nimport React from 'react';\n\nit('${1:${TM_FILENAME_BASE}} renders renders without crashing', () => {\n\tshallow(\n\t<${1:${TM_FILENAME_BASE}}/>\n\t);\n});",
+    "description": "Creates a basic test for a React Component"
+  },
+  "componentConstructor": {
+    "prefix": "constructor",
+    "body": "constructor(props) {\n\tsuper(props);\n\n\tthis.state = {};\n}",
+    "description": "Creates a constructor with empty state"
+  }
+}
