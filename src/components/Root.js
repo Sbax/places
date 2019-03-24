@@ -42,6 +42,8 @@ const Navigation = styled.section`
 
   border-right: 2px solid ${theme.accent};
 
+  overflow: auto;
+
   a {
     display: flex;
     padding: 1rem;
