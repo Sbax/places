@@ -5,7 +5,7 @@ const loadCity = (city, callback) => {
     window.gapi.client.sheets.spreadsheets.values
       .get({
         spreadsheetId: config.cities[city].id,
-        range: 'Sheet1!A4:T',
+        range: 'Sheet1!A2:T',
       })
       .then(
         response => {
