@@ -1,14 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
 import { withRouter } from 'react-router';
 import { NavLink, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../common/theme';
 import config from '../config';
 import ListContainer from '../containers/ListContainer';
-import Loader from './Loader';
 import Map from './Map';
+import Loader from './Loader';
 
 const Main = styled.section``;
 const Sidebar = styled.aside`
@@ -137,9 +136,6 @@ class Root extends Component {
   componentDidMount() {
     const { initGapi } = this.props;
     initGapi();
-
-    ReactGA.initialize('UA-109344681-2');
-    ReactGA.set({ anonymizeIp: true });
   }
 
   render() {
