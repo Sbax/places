@@ -1,4 +1,7 @@
 import config from '../config';
+import { categories as categoriesObject } from './constants';
+
+const categories = Object.values(categoriesObject);
 
 const loadCity = (city, callback) => {
   window.gapi.client.load('sheets', 'v4', () => {
@@ -11,9 +14,13 @@ const loadCity = (city, callback) => {
         response => {
           const data = response.result.values;
 
-          const cities =
-            data.map(row => {
+          const cities = data
+            .map(row => {
               const [name, address, lat, lng, what, notes] = row;
+
+              if (!name || !address || !lat || !lng || !what) return false;
+              if (!categories.includes(what)) return false;
+
               const key = `${name
                 .toLowerCase()
                 .split(' ')
@@ -28,7 +35,11 @@ const loadCity = (city, callback) => {
                 what,
                 notes,
               };
-            }) || [];
+            })
+            .filter(Boolean)
+            .sort(
+              (a, b) => categories.indexOf(a.what) - categories.indexOf(b.what)
+            );
 
           callback({ data: cities });
         },

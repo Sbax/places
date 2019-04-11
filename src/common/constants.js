@@ -1,10 +1,10 @@
 export const categories = {
-  eat: 'Eat',
-  drink: 'Drink',
-  beer: 'Beer',
   see: 'See',
   museum: 'Museum',
   buy: 'Buy',
+  eat: 'Eat',
+  drink: 'Drink',
+  beer: 'Beer',
 };
 
 export const categoryIcons = {
