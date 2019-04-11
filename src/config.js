@@ -13,6 +13,12 @@ export default {
       center: { lat: 41.897653, lng: 12.46484 },
       zoom: 13,
     },
+    bologna: {
+      id: '1Pnr5HKW0Ls06xUjCf3VmdbiL7ViUUvs04SjFLQT9MIU',
+      name: 'Bologna',
+      center: { lat: 44.495153, lng: 11.341737 },
+      zoom: 16,
+    },
     milan: {
       id: '1KOL5RuSK4ryt4xb_wq3zCxY4sUaUdXVYHjytaCIl0Vc',
       name: 'Milano',
