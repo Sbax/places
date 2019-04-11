@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { categories, categoryIcons } from '../common/constants';
 import theme from '../common/theme';
 
 const Circle = styled.div`
@@ -49,13 +48,7 @@ const Circle = styled.div`
 
 class PlaceMarker extends Component {
   render() {
-    const { place, className } = this.props;
-    const { what } = place;
-
-    const [category] = Object.entries(categories).find(el => el[1] === what);
-
-    const icon = categoryIcons[category];
-
+    const { icon, category, className } = this.props;
     return (
       <Circle className={`${category} ${className}`}>
         <FontAwesomeIcon icon={icon} />

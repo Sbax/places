@@ -1,5 +1,5 @@
 import config from '../config';
-import { categories as categoriesObject } from './constants';
+import { categories as categoriesObject, categoryIcons } from './constants';
 
 const categories = Object.values(categoriesObject);
 
@@ -26,13 +26,19 @@ const loadCity = (city, callback) => {
                 .split(' ')
                 .join('-')}:${lat}:${lng}`;
 
+              const [category] = Object.entries(categoriesObject).find(
+                el => el[1] === what
+              );
+              const icon = categoryIcons[category];
+
               return {
                 key,
                 name,
                 address,
                 lat,
                 lng,
-                what,
+                category,
+                icon,
                 notes,
               };
             })

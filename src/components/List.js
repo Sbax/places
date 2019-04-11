@@ -6,6 +6,7 @@ import theme from '../common/theme';
 import Marker from './Marker';
 import config from '../config';
 import Loader from './Loader';
+import { categories } from '../common/constants';
 
 const Container = styled.section`
   overflow: auto;
@@ -147,7 +148,7 @@ class List extends Component {
                 ref={placeKey === place.key ? this.activeElement : null}
               >
                 <Element to={`/${cityKey}/${place.key}`}>
-                  <Marker place={place} />
+                  <Marker {...place} />
                   <span>{place.name}</span>
                 </Element>
 

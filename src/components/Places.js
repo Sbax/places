@@ -41,7 +41,7 @@ class Places extends Component {
               minZoom={15}
             >
               <NavLink to={`/${cityKey}/${place.key}`}>
-                <Marker className={active ? 'active' : ''} place={place} />
+                <Marker className={active ? 'active' : ''} {...place} />
               </NavLink>
               {active && place.name}
             </MapBoxMarker>
